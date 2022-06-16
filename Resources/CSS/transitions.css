@@ -1,0 +1,57 @@
+#experience-body {
+    margin-left: -10%;
+    opacity: 0;
+}
+
+#experience-body.firstTransition {
+    transition: 3s;
+    margin-left: 0%;
+    opacity: 1;
+}
+
+#academic-body {
+    margin-right: -10%;
+    opacity: 0;
+}
+
+#academic-body.secondTransition {
+    transition: 3s;
+    margin-right: 0%;
+    opacity: 1;
+}
+
+#solidworks, #inventor, #word, 
+#excel, #powerpoint, #html5, #css3, 
+#javascript, #react, #github {
+    opacity: 0;
+}
+
+#solidworks.thirdTransition,
+#html5.thirdTransition {
+    transition: opacity 1s linear;
+    opacity: 1;
+}
+
+#inventor.thirdTransition, 
+#css3.thirdTransition {
+    transition: opacity 1.5s linear;
+    opacity: 1;
+}
+
+#word.thirdTransition, 
+#javascript.thirdTransition {
+    transition: opacity 2s linear;
+    opacity: 1;
+}
+
+#excel.thirdTransition,  
+#react.thirdTransition {
+    transition: opacity 2.5s linear;
+    opacity: 1;
+}
+ 
+#powerpoint.thirdTransition, 
+#github.thirdTransition {
+    transition: opacity 3s linear;
+    opacity: 1;
+}

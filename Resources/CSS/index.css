@@ -1,0 +1,570 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 200;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(195,195,195,1) 35%, rgba(117,117,117,1) 100%);
+    text-decoration: none;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+/* Heading */
+
+header {
+    width: 100%;
+    height: auto;
+}
+
+/*#side-bar {
+    width: 3rem;
+    height: 3rem;
+    margin: 1.25rem;
+}*/
+
+/* Description */
+
+#description {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    height: auto;
+}
+
+#description-text {
+    width: 30%;
+    height: auto;
+    padding: 6rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+h1 {
+    padding-bottom: 2rem;
+    color: rgb(32, 32, 229);
+}
+
+@media only screen and (max-width: 900px) {
+    
+    #description-text {
+        width: 45%;
+    }
+    
+    h1 {
+        font-size: 5rem;
+        padding-bottom: 3rem;
+        color: rgb(32, 32, 229);
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    
+    #description-text {
+        width: 75%;
+        margin-top: 1rem;
+        padding: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
+}
+
+/* Experience & Academic */
+
+#main-container {
+    width: 100%;
+    height: auto;
+}
+
+#experience-container, #academic-container {
+    width: 100%;
+    height: auto;
+    background-color: rgba(35, 35, 35, 1);
+    color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#experience-container {
+    grid-template-areas: "experience-title empty1"
+                         "experience-body empty1";
+    grid-template-rows: 25% 75%;
+    grid-template-columns: 1fr 1fr;
+}
+
+#academic-container {
+    grid-template-areas: "empty2 academic-title"
+                         "empty2 academic-body"
+                         "empty2 academic-body";
+    grid-template-rows: 20% 40% 40%;
+    grid-template-columns: 1fr 1fr;
+}
+
+#experience-title, #experience-body, #academic-title, #academic-body {
+    width: 80%;
+    height: auto;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    overflow: hidden;
+}
+
+#experience-title {
+    grid-area: experience-title;
+}
+
+#experience-body {
+    grid-area: experience-body;
+}
+
+#academic-title {
+    grid-area: academic-title;
+}
+
+#academic-body {
+    position: sticky;
+    grid-area: academic-body;
+    margin-bottom: 5rem;
+}
+
+#experience-title, #experience-body {
+    /*border-bottom: 1px solid white;*/
+    border-right: 1px solid white;
+    margin-top: 2.5rem;
+}
+
+#academic-title, #academic-body {
+    /*border-top: 1px solid white;*/
+    border-left: 1px solid white;
+    margin-top: 2.5rem;
+}
+
+.date {
+    color: rgba(117,117,117,1);
+}
+
+#experience-container h2 {
+    justify-items: center;
+    padding: 3rem;
+}
+
+#experience-container p {
+    padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    #experience-container, #academic-container {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    #experience-container, #academic-container {
+        width: 100%;
+        height: auto;
+    }
+    
+    #experience-title, #experience-body, #academic-title, #academic-body {
+        width: 80%;
+        height: auto;
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+        overflow: hidden;
+    }
+
+    #experience-title h2, #academic-title h2 {
+        font-size: 3rem;
+    }
+
+    #experience-body h3, #academic-body h3 {
+        font-size: 2.25rem;
+    }
+
+    #experience-body p, #academic-body p {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    
+    #experience-container, #academic-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-content: center; 
+    }
+    
+    #experience-title, #experience-body, #academic-title, #academic-body {
+        width: 90%;
+        border: none;
+    }
+
+    #experience-title {
+        margin-top: -0.5rem;
+    }
+
+    #academic-title {
+        margin-left: 5rem;
+    }
+
+    #experience-title h2, #academic-title h2 {
+        font-size: 2.25rem;
+    }
+
+    #experience-body h3, #academic-body h3 {
+        font-size: 1.5rem;
+    }
+
+    #experience-body p, #academic-body p {
+        font-size: 1.25rem;
+    }
+}
+
+/* Proyectos */
+
+#proyects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-items: center;
+}
+
+#proyects h2 {
+    color: rgba(35, 35, 35, 1);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+} 
+  
+#proyect-cards {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    justify-content: center;
+    perspective: 300px;
+}
+    
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*color: #fff;*/
+    width: 37rem;
+    height: 30rem;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    transition: all .3s ease-in;
+}
+
+.card[data-pos="0"] {
+    z-index: 5;
+}
+
+.card[data-pos="-1"],
+.card[data-pos="1"] {
+    opacity: 0.7;
+    filter: blur(1px) grayscale(10%);
+}
+
+.card[data-pos="-1"] {
+    transform: translateX(-40%) scale(.9);
+    z-index: 4;
+}
+
+.card[data-pos="1"] {
+    transform: translateX(40%) scale(.9);
+    z-index: 4;
+}
+
+.card[data-pos="-2"],
+.card[data-pos="2"] {
+    opacity: 0.4;
+    filter: blur(3px) grayscale(20%);
+}
+
+.card[data-pos="-2"] {
+    transform: translateX(-70%) scale(.8);
+    z-index: 3;
+}
+
+.card[data-pos="2"] {
+    transform: translateX(70%) scale(.8);
+    z-index: 3;
+}
+
+#mac {
+    background-image: url('../Images/Macbook pro 2.jpg');
+    background-position: left;
+}
+
+#switch {
+    background-image: url('../Images/Switch v2.jpg');
+}
+
+#r2d2 {
+    background-image: url('../Images/R2D2_2.jpg');
+}
+
+#jukebox {
+    background-image: url('../Images/Jukebox 2.jpg');
+}
+
+#snitch {
+    background-image: url('../Images/Snitch.jpg');
+}
+
+.card p {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    #proyect-cards {
+        height: 25rem;
+    }
+    
+    .card {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    
+    #proyects h2 {
+        font-size: 2.5rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    } 
+    
+    #proyect-cards {
+        width: 90%;
+        height: 12rem;
+    }
+    
+    .card {
+        width: 12rem;
+        height: 12rem;
+        border-radius: 5px;
+    }
+}
+
+/* Software */
+
+#software {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    background-color: rgb(32, 32, 229);
+}
+
+#software-container {
+    display: grid;
+    grid-template-areas: "solidworks inventor word excel powerpoint"
+    "html css javascript react github";
+    grid-template-rows: repeat(1fr, 2);
+    grid-template-columns: repeat(1fr, 5);
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+#software h2 {
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.software-logo {
+    width: 5.5rem;
+    height: 5rem;
+}
+
+#solidworks {
+    grid-area: solidworks;
+}
+
+#inventor {
+    grid-area: inventor;
+}
+
+#word {
+    grid-area: word;
+}
+
+#excel {
+    grid-area: excel;
+}
+
+#powerpoint {
+    grid-area: powerpoint;
+}
+
+#html5 {
+    grid-area: html;
+}
+
+#css3 {
+    grid-area: css;
+}
+
+#javascript {
+    grid-area: javascript;
+}
+
+#react {
+    grid-area: react;
+}
+
+#github {
+    grid-area: github;
+}
+
+@keyframes tilted {
+    0% { transform: rotate(0deg) }
+    15% { transform: rotate(-15deg) scale(1.25)}
+    100% { transform: rotate(15deg) scale(1.5) }
+}
+
+#solidworks:hover, #inventor:hover, 
+#word:hover, #excel:hover, 
+#powerpoint:hover, #html5:hover, 
+#css3:hover, #javascript:hover, 
+#react:hover, #github:hover {
+    animation-name: tilted;
+    animation-duration: 1.25s;
+}
+
+@media only screen and (max-width: 900px) {
+    #software-container {
+        width: 80%;
+    }
+    
+    #software h2 {
+        font-size: 2.5rem;
+    }
+    
+    .software-logo {
+        width: 4.5rem;
+        height: 4rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    
+    #software-container {
+        width: 95%;
+        gap: 1rem;
+        margin-bottom: 4.5rem;
+        padding-left: 0.75rem;
+    }
+    
+    #software h2 {
+        font-size: 2.5rem;
+    }
+    
+    .software-logo {
+        width: 3rem;
+        height: 2.85rem;
+    }
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+footer img {
+    padding-bottom: 2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+@keyframes zoomInOut {
+    0% { transform: scale(1) }
+    15% { transform: scale(1.5)}
+    100% { transform: scale(1.25) }
+}
+
+.logo p {
+    display: none;
+}
+
+.logo:hover {
+    animation-name: zoomInOut;
+    animation-duration: 2s;
+}
+
+@media only screen and (max-width: 900px) {
+    
+    #gmail, #phone, #number {
+        display: none;
+    }
+
+    footer img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    p {
+        margin-top: 1.25rem;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    
+    #gmail, #phone, #number, #email {
+        display: none;
+    }
+
+    footer img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
