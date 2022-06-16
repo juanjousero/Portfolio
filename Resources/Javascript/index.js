@@ -1,5 +1,7 @@
 // Definimos las variables iniciales
 
+const height = document.body.scrollHeight;
+
 const description = document.getElementById('description');
 const experience = document.getElementById('experience-container');
 const academic = document.getElementById('academic-container');
@@ -18,23 +20,42 @@ const jsIcon = document.getElementById('javascript');
 const reactIcon = document.getElementById('react');
 const githubIcon = document.getElementById('github');
 
-// Programamos la transición para el cuerpo de la experiencia
+// Programamos la función de la transición general
 
-function firstTransitionFunc (event) {
-    experienceBody.classList.add('firstTransition');
-    description.removeEventListener('wheel', firstTransitionFunc);
+function transitionFunc(event) {
+    let scrollY = this.scrollY;
+    let percentage = height/scrollY;
+    if(scrollY >= 300 && scrollY <= 500) {
+      firstTransitionFunc();
+    } else if (scrollY >= 601 && scrollY <= 800) {
+      secondTransitionFunc();
+    } else if (scrollY >= 1501 && scrollY <= 1900) {
+      thirdTransitionFunc();
+    } else {
+      //window.removeEventListener('scroll', transitionFunc());
+      return;
+    }
 }
 
-description.addEventListener('wheel', firstTransitionFunc);
+// Programamos la transición para el cuerpo de la experiencia
+
+function firstTransitionFunc () {
+    experienceBody.classList.add('firstTransition');
+    //description.removeEventListener('scroll', firstTransitionFunc);
+    //console.log('First transition');
+}
+
+//description.addEventListener('click', firstTransitionFunc);
 
 // Programamos la transición para el cuerpo de la formación
 
 function secondTransitionFunc (event) {
     academicBody.classList.add('secondTransition');
-    experience.removeEventListener('wheel', secondTransitionFunc);
+    //experience.removeEventListener('scroll', secondTransitionFunc);
 }
 
-experience.addEventListener('wheel', secondTransitionFunc);
+//experience.addEventListener('scroll', secondTransitionFunc);
+
 
 // Programamos la transición para los iconos del software
 
@@ -50,10 +71,12 @@ function thirdTransitionFunc (event) {
     reactIcon.classList.add('thirdTransition');
     githubIcon.classList.add('thirdTransition');
 
-    proyects.removeEventListener('wheel', thirdTransitionFunc);
+    //proyects.removeEventListener('scroll', thirdTransitionFunc);
 }
 
-proyects.addEventListener('wheel', thirdTransitionFunc);
+//proyects.addEventListener('scroll', thirdTransitionFunc);
+
+window.addEventListener('scroll', transitionFunc);
 
 // Programamos la transición para los proyectos
 
