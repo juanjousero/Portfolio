@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/reset.css">
+    <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Merriweather:wght@300;400&family=Roboto+Mono:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <title>Juanjo Usero</title>
+</head>
+<body>
+    <header>
+        <div id="index">
+            <a href="#about">Sobre mí</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact-me">Contáctame</a>
+            <a href="./resources/documents/CV Juanjo.pdf" download>CV</a>
+        </div>
+        <div id="social-media">
+            <a href="https://www.linkedin.com/in/juanjousero/" target="_blank"><img src="./resources/logos/linkedin.png" alt="Linkedin logo"></a>
+            <a href="https://github.com/juanjousero" target="_blank"><img src="./resources/logos/github.png" alt="Github logo"></a>
+        </div>
+    </header>
+    <main>
+        <div id="about">
+            <h1 class="about-intern aboutH1">Sobre mí</h1>
+            <h2 class="about-intern aboutH2">Soy un desarrollador <span>Front-End</span> con grado en Ingeniería Industrial Mecánica</h2>
+            <p class="about-intern aboutP">Siempre me ha fascinado <span>crear</span>, desde que jugaba con Lego © hasta ahora desarrollando webs, pasando por modelado e impresión 3D.</p>
+        </div>
+        <div id="skills">
+            <div id="hard-skills">
+                <div class="graph">
+                    <div class="graph-bar html"><span>HTML</span></div>
+                    <div class="graph-bar js"><span>Javascript</span></div>
+                    <div class="graph-bar css"><span>CSS</span></div>
+                    <div class="graph-bar react"><span>React</span></div>
+                    <div class="graph-bar angular"><span>AngularJS</span></div>
+                    <div class="legend"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+                </div>
+            </div>
+            <h2 id="hard-skills-text">Habilidades tecnológicas</h2>
+            <h2 id="soft-skills-text">Habilidades personales</h2>
+            <div id="soft-skills">
+                <div class="graph">
+                    <div class="graph-bar resolutividad"><span>Resolutividad</span></div>
+                    <div class="graph-bar creatividad"><span>Creatividad</span></div>
+                    <div class="graph-bar proactividad"><span>Proactividad</span></div>
+                    <div class="graph-bar videojuegos"><span>Jefes de videojuegos</span></div>
+                    <div class="graph-bar tiros"><span>Tiros libres</span></div>
+                    <div class="legend"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+                </div>
+            </div>
+        </div>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div id="portfolio-box">
+                <div id="portfolio-photos">
+                    <a href="https://juanjousero.github.io/JuanFlix/" target="_blank"><img src="./resources/images/JuanFlix.png" alt="Netflix based page image as example" class="portfolio-card JuanFlix"></a>
+                    <a href="https://juanjousero.github.io/Tic-Tac-Toe/" target="_blank"><img src="./resources/images/TicTacToe.png" alt="Tic-Tac-Toe game image as example" class="portfolio-card TicTacToe"></video></a>
+                    <a href="https://juanjousero.github.io/Harry-Potter-library/" target="_blank"><img src="./resources/images/HarryPotterAPI.png" alt="Harry Potter characters searcher page image as example" class="portfolio-card HarryPotter"></a>
+                    <a href="https://juanjousero.github.io/Magic-English/" target="_blank"><img src="./resources/images/MagicCelinglish.png" alt="Game for improve english vocabulary image as example" class="portfolio-card MagicCelinglish"></a>
+                </div>
+                <div id="portfolio-list">
+                    <ul id="portfolio-ul">
+                        <li class="list JuanFlix-Text">JuanFlix</li>
+                        <li class="list TicTacToe-Text">Tic-Tac-Toe</li>
+                        <li class="list HarryPotter-Text">Harry Potter Bookshop</li>
+                        <li class="list Magic-Text">Magic Celinglish</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="contact-me">
+            <p>Contáctame</p>
+            <div id="comment-box">
+                <a href="mailto: usero481@gmail.com" title="Envíame un Email" rel="me" target="_blank">usero481@gmail.com</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!--<a href="#about" id="going-up"><p>^</p></a>-->
+        <div id="copyright">
+            <p>Juanjo Usero © 2022</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./resources/javascript/index.js" defer></script>
+    <script src="./resources/javascript/portfolioCarrousel.js" defer></script>
+
+</body>
+</html>
