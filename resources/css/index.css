@@ -37,6 +37,10 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    width: 100%;
+}
+
 /* Header */
 
 header {
@@ -80,6 +84,27 @@ header {
 #social-media img:hover {
     box-shadow: -2px 2px 2.5px black;
     transform: scale(1.25);
+}
+
+@media only screen and (max-width: 850px) {
+    
+    #index {
+        width: 60%;
+    }
+    
+    #social-media {
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #index {
+        display: none;
+    }
+
+    #social-media {
+        width: 30%;
+    }
 }
 
 /* About */
@@ -188,6 +213,77 @@ header {
     color: white;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 850px) {
+    #about {
+        position: relative;
+        left: -10%;
+    }
+    
+    #about::before {
+        width: 25rem;
+        left: 40%;
+        border-radius: 30px;
+    }
+
+    #about::after {
+        top: 7rem;
+        left: 47rem;
+        border-radius: 10px;
+    }
+    
+    .aboutH1 {
+        width: 50%;
+        font-size: 4rem;
+        background-size: 80%;
+    }
+    
+    .aboutH2 {
+        width: 60%;
+        font-size: 1.75rem;
+    }
+
+    .aboutP {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    #about {
+        position: relative;
+        left: -10%;
+    }
+    
+    #about::before {
+        width: 90%;
+        left: 15%;
+        border-radius: 20px;
+    }
+
+    #about::after {
+        display: none;
+    }
+    
+    .aboutH1 {
+        width: 80%;
+        font-size: 3rem;
+        background-size: 80%;
+    }
+    
+    .aboutH2 {
+        width: 80%;
+        font-size: 1.75rem;
+    }
+
+    .aboutP {
+        width: 80%;
+    }
+} 
 
 /* Skills */
 
@@ -304,6 +400,50 @@ header {
     color: white;
 }
 
+@media only screen and (max-width: 850px) {
+    #skills {
+        width: 95%;
+        grid-template-areas: "title1"
+                             "hard"
+                             "title2"
+                             "soft";
+        grid-template-rows: 10rem 90% 15rem 90%;
+        grid-template-columns: 90%;
+    }
+
+    #soft-skills-text {
+        padding-top: 4rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #hard-skills-text, #soft-skills-text {
+        width: 50%;
+        font-size: 2.25rem;
+        font-weight: 500;
+    }
+
+    .graph {
+        height: 22rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .graph-bar {
+        height: 3.15rem;
+    }
+    
+    .graph-bar span {
+        right: 1rem;
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+    .legend {
+        margin-top: 5rem;
+    }
+}
+
 /* Habilidades tecnológicas */
 
 .html {
@@ -411,12 +551,12 @@ header {
 
 #portfolio {
     width: 100%;
-    height: 50rem;
+    height: 57.5rem;
     position: relative;
     top: 10rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: white;
     color: black;
@@ -425,13 +565,13 @@ header {
 #portfolio h2 {
     font-size: 3.5rem;
     font-weight: 400;
+    position: relative;
 }
 
 #portfolio-box {
-    width: 90%;
+    width: 95%;
     height: auto;
     position: relative;
-    top: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -439,13 +579,13 @@ header {
 }
 
 #portfolio-photos {
-    width: 75%;
+    width: 80%;
     height: 40rem;
 }
 
 #portfolio-photos a {
-    width: 75%;
-    height: auto;
+    width: 80%;
+    height: 0.25rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -454,14 +594,17 @@ header {
 }
 
 .portfolio-card {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 40rem;
     border-radius: 10px;
 }
 
 #portfolio-list {
     width: 20%;
     height: 40rem;
+    display: flex;
+    align-items: center;
+    margin-left: 20rem;
 }
 
 #portfolio-list ul {
@@ -476,7 +619,7 @@ header {
 .list {
     font-size: 2rem;
     color: rgba(95, 15, 39, 1);
-    margin-top: 3rem;
+    margin-bottom: 3rem;
     font-weight: 300;
 }
 
@@ -484,6 +627,134 @@ header {
     cursor: pointer;
     transform: scale(1.15);
     padding-left: 5%;
+}
+
+@media only screen and (max-width: 850px) {
+    
+    #portfolio h2 {
+        position: relative;
+        top: 15rem;
+    }
+
+    #portfolio-box {
+        width: 95%;
+        position: relative;
+        top: 20rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #portfolio-photos {
+        width: 100%;
+        height: 30rem;
+    }
+    
+    #portfolio-photos a {
+        width: 100%;
+    }
+    
+    .portfolio-card {
+        max-width: 100%;
+        max-height: 40rem;
+        border-radius: 10px;
+    }
+    
+    #portfolio-list {
+        width: 100%;
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2%;
+    }
+    
+    #portfolio-list ul {
+        flex-direction: row;
+    }
+    
+    .list {
+        width: 20%;
+        padding-right: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .JuanFlix-Text {
+        margin-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    #portfolio {
+        height: 40rem;
+    }
+
+    #portfolio h2 {
+        position: relative;
+        top: 1rem;
+        font-size: 2.5rem;
+    }
+
+    #portfolio-box {
+        width: 95%;
+        position: relative;
+        top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #portfolio-photos {
+        width: 100%;
+        height: 15rem;
+    }
+    
+    #portfolio-list {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10%;
+    }
+    
+    #portfolio-list ul {
+        display: grid;
+        grid-template-areas: "juanflix tic"
+                             "hp magic";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 45% 45%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .list {
+        width: 100%;
+        font-size: 1.75rem;
+        align-self: center;
+        justify-self: center;
+        padding-right: 0;
+    }
+
+    .JuanFlix-Text {
+        grid-area: juanflix;
+        margin-left: 0;
+    }
+
+    .TicTacToe-Text {
+        grid-area: tic;
+    }
+
+    .HarryPotter-Text {
+        grid-area: hp;
+    }
+
+    .Magic-Text {
+        grid-area: magic;
+    }
 }
 
 .TicTacToe, 
@@ -548,11 +819,11 @@ header {
 }
 
 #contact-me:hover::before {
-    width: 28rem;
-    height: 28rem;
+    width: 35rem;
+    height: 35rem;
     position: absolute;
-    top: 1.25rem;
-    left: 26rem;
+    top: -2rem;
+    left: 45%;
     background-color:white;
     opacity: 0.75;
     transition-property: all;
@@ -580,6 +851,80 @@ header {
 #contact-me a {
     font-family: 'Merriweather', serif;
     color: rgba(31, 29, 30, 1);
+}
+
+@media only screen and (max-width: 850px) {
+    #contact-me {
+        width: 100%;
+        height: 45rem;
+        position: relative;
+        top: 10rem;
+        left: 0%;
+        margin-bottom: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 2rem;
+    }
+    
+    #contact-me::before {
+        width: 25rem;
+        height: 25rem;
+        position: absolute;
+        top: 23rem;
+        left: 22.5%;
+        background-color: white;
+        opacity: 1;
+    }
+    
+    #comment-box {
+        width: 60%;
+        height: 10rem;
+        position: relative;
+        top: 30%;
+        left: -10rem;
+    }
+    
+    #contact-me p {
+        position: relative;
+        top: -10rem;
+        left: 5rem;
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #contact-me {
+        height: 30rem;
+        position: relative;
+        top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+    
+    #contact-me::before {
+        width: 22rem;
+        height: 22rem;
+        position: absolute;
+        top: 14.5rem;
+        left: 8%;
+    }
+    
+    #comment-box {
+        width: 100%;
+        height: 4rem;
+        position: relative;
+        top: 35%;
+        left: -6rem;
+        font-size: 1.75rem;
+    }
+    
+    #contact-me p {
+        position: relative;
+        font-size: 2.25rem;
+    }
 }
 
 /* Footer */
