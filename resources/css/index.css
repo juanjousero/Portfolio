@@ -260,7 +260,7 @@ header {
     }
     
     #about::before {
-        width: 90%;
+        width: 87.5%;
         left: 15%;
         border-radius: 20px;
     }
