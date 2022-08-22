@@ -165,6 +165,7 @@ header {
     background-image: linear-gradient(90deg, rgba(55,141,74,1) 0%, rgba(77,177,196,1) 49%, rgba(255, 255, 255, 1) 100%);
     background-size: 70%;
     background-clip: text;
+    -webkit-background-clip: text;
     -moz-text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
 }
@@ -446,7 +447,6 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3rem;
-    flex-wrap: wrap;
 }
 
 #portfolio-photos {
