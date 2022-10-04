@@ -501,19 +501,23 @@ header {
     padding-left: 5%;
 }
 
+.Playstation,
+.JuanFlix,
 .TicTacToe, 
 .HarryPotter, 
 .MagicCelinglish {
     visibility: hidden;
 }
 
+.Playstation-Text,
+.JuanFlix-Text,
 .TicTacToe-Text,
 .HarryPotter-Text,
 .Magic-Text {
     color: gray;
 }
 
-.JuanFlix-Text {
+.Sense-Text {
     font-weight: 500;
 }
 
@@ -672,14 +676,19 @@ footer {
         padding-top: 4rem;
     }
 
+    #portfolio {
+        height: 61.5rem;
+    }
+
     #portfolio h2 {
         position: relative;
+        top: -3rem;
     }
 
     #portfolio-box {
         width: 95%;
         height: 30rem;
-        top: -5rem;
+        top: -12rem;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -706,7 +715,7 @@ footer {
         width: 100%;
         height: 20rem;
         position: relative;
-        top: 10rem;
+        top: 19rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -714,17 +723,47 @@ footer {
     }
     
     #portfolio-list ul {
-        flex-direction: row;
+        display: grid;
+        grid-template-areas: "sense playstation"
+                             "juanflix tic"
+                             "hp magic";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 45% 45%;
+        align-items: center;
+        justify-content: center;
     }
     
     .list {
-        width: 20%;
-        padding-right: 0.25rem;
-        font-size: 1.5rem;
+        width: 100%;
+        font-size: 1.75rem;
+        align-self: center;
+        justify-self: center;
+        padding-right: 0;
+    }
+
+    .Sense-Text {
+        grid-area: sense;
+    }
+
+    .Playstation-Text {
+        grid-area: playstation;
     }
 
     .JuanFlix-Text {
-        margin-left: 2rem;
+        grid-area: juanflix;
+        margin-left: 0;
+    }
+
+    .TicTacToe-Text {
+        grid-area: tic;
+    }
+
+    .HarryPotter-Text {
+        grid-area: hp;
+    }
+
+    .Magic-Text {
+        grid-area: magic;
     }
 
     #contact-me {
@@ -853,19 +892,19 @@ footer {
     /* Portfolio */
 
     #portfolio {
-        height: 40rem;
+        height: 50rem;
     }
 
     #portfolio h2 {
         position: relative;
-        top: 1rem;
+        top: 0rem;
         font-size: 2.5rem;
     }
 
     #portfolio-box {
         width: 95%;
         position: relative;
-        top: 0.5rem;
+        top: 0rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -890,7 +929,8 @@ footer {
     
     #portfolio-list ul {
         display: grid;
-        grid-template-areas: "juanflix tic"
+        grid-template-areas: "sense playstation"
+                             "juanflix tic"
                              "hp magic";
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 45% 45%;
@@ -904,6 +944,14 @@ footer {
         align-self: center;
         justify-self: center;
         padding-right: 0;
+    }
+
+    .Sense-Text {
+        grid-area: sense;
+    }
+
+    .Playstation-Text {
+        grid-area: playstation;
     }
 
     .JuanFlix-Text {
@@ -953,6 +1001,8 @@ footer {
     
     #contact-me p {
         position: relative;
+        top: -2.5rem;
+        left: 0rem;
         font-size: 2.25rem;
     }
 }
