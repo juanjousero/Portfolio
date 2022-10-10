@@ -505,7 +505,7 @@ header {
 .JuanFlix,
 .TicTacToe, 
 .HarryPotter, 
-.MagicCelinglish {
+.spaceX {
     visibility: hidden;
 }
 
@@ -513,7 +513,7 @@ header {
 .JuanFlix-Text,
 .TicTacToe-Text,
 .HarryPotter-Text,
-.Magic-Text {
+.SpaceX-Text {
     color: gray;
 }
 
@@ -622,6 +622,10 @@ footer {
 
 @media only screen and (max-width: 850px) {
     
+    html, body {
+        overflow-x: hidden;
+    }
+
     #index {
         width: 60%;
     }
@@ -715,7 +719,8 @@ footer {
         width: 100%;
         height: 20rem;
         position: relative;
-        top: 19rem;
+        top: 5rem;
+        left: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -726,7 +731,7 @@ footer {
         display: grid;
         grid-template-areas: "sense playstation"
                              "juanflix tic"
-                             "hp magic";
+                             "hp spaceX";
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 45% 45%;
         align-items: center;
@@ -762,8 +767,8 @@ footer {
         grid-area: hp;
     }
 
-    .Magic-Text {
-        grid-area: magic;
+    .SpaceX-Text {
+        grid-area: spaceX;
     }
 
     #contact-me {
@@ -810,7 +815,7 @@ footer {
 
 @media only screen and (max-width: 450px) {
     
-    body {
+    html, body {
         overflow-x: hidden;
     }
 
@@ -921,6 +926,7 @@ footer {
         height: 10rem;
         position: relative;
         top: -2.5rem;
+        left: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -931,7 +937,7 @@ footer {
         display: grid;
         grid-template-areas: "sense playstation"
                              "juanflix tic"
-                             "hp magic";
+                             "hp spaceX";
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 45% 45%;
         align-items: center;
@@ -967,8 +973,8 @@ footer {
         grid-area: hp;
     }
 
-    .Magic-Text {
-        grid-area: magic;
+    .spaceX-Text {
+        grid-area: spaceX;
     }
 
     #contact-me {
